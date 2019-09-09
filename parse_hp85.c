@@ -22,10 +22,6 @@
  *	Another visible problem is that there are tons of extra brackets. E.g. D$[J,J+1] is printed as D$[J,(J+2)]
  *	annoying, but the HP-85 will trim the extra brackets, so the program is still loadable by an HP-85.
  *
- *	Pascal-style assignments? Yes, I use the := operator because I want to be able to differentiate between
- *	the conditional and the assignment. This is for debugging only and will go away. If you can't wait,
- *	simply search for := and delete the :. Nothing depends on it.
- *
  *	This is work in progress, as I am still trying to detokenize the BASIC programs from the Standard PAC.
  *
  *	Version 1.0 (7.9.19): can list all programs in the HP-85 standard pac
@@ -40,14 +36,14 @@
  *			Re-done formatting from scratch to simplify code
  *			Formatting is a mess, we need a variable with flags, to select spaces, commas, whatever.
  * 			Need to fix double $$ as in 
- *				O:=((POSM$$[(((F1-1)*10)+1)]("*")+((F1-1)*10))-1)
- * 				O:=M$$[(((F1-1)*10)+1),O]
+ *				O=((POSM$$[(((F1-1)*10)+1)]("*")+((F1-1)*10))-1)
+ * 				O=M$$[(((F1-1)*10)+1),O]
  *			commands with optional arguments (e.g. GCLEAR [v], BIORYTHMS line 2080)
  *			no comma befre last arg
  *				635 IF P9 THEN PRINT USING "K,4D"; "# COMPOUNDING PERIODS/YR."N1 
  *			missing $ 
- *				60 M[91,120]:="OCTOBER***NOVEMBER**DECEMBER**"
- *				1660 O:=((POS(M$[(((F1-1)*10)+1)],"*")+((F1-1)*10))-1)
+ *				60 M[91,120]="OCTOBER***NOVEMBER**DECEMBER**"
+ *				1660 O=((POS(M$[(((F1-1)*10)+1)],"*")+((F1-1)*10))-1)
  *			out of order BEEP args
  *			out of order IF THEN
  *				1230 GOSUB 5000  @ DISP  IF ((N*J)=0) THEN "INSUFFICIENT DATA", @ 50150BEEP @ GOTO 180 

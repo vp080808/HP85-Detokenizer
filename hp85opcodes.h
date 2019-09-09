@@ -146,8 +146,8 @@ struct bas_cmd_tbl bas_tbl[] = {
 	0x04,	OP_TERM,	1,	MODE_TRIM_STR,			"real",		/* 8 byte real number */
 	0x05,	OP_TERM,	1,	MODE_TRIM_STR,			"string5",
 	0x06,	OP_TERM,	1,	MODE_TRIM_STR,			"string6",
-	0x07,	OP_ND2,		-2,	FMT_INFNB,			":=",		// string assignment
-	0x08,	OP_ND2,		-2,	FMT_INFNB,			":=",		// numeric assignment
+	0x07,	OP_ND2,		-2,	FMT_INFNB,			"=",		// string assignment
+	0x08,	OP_ND2,		-2,	FMT_INFNB,			"=",		// numeric assignment
 	0x09,	OP_ND2,		-2,	FMT_NUM,			"",		// 1d integer? array subscript
 	0x0A,	OP_ND3,		-3,	FMT_NUM | MODE_COMMA,		"",		// 2d integer? array subscript
 	0x0B,	OP_ND2,		-2,	FMT_NUM,			"",		// 1d real? array subscript
@@ -156,7 +156,7 @@ struct bas_cmd_tbl bas_tbl[] = {
 	0x11,	OP_TERM,	1,	FMT_DFLT,			"scalar variable address",
 	0x12,	OP_TERM,	1,	FMT_DFLT,			"array variable address",
 	0x13,	OP_TERM,	1,	FMT_DFLT | MODE_DSP_ARG | MODE_STR,	"string variable address>",
-	0x14,	OP_ASGN_MULT,	-2,	FMT_DFLT,			":=",		// store numeric, multiple assignment?
+	0x14,	OP_ASGN_MULT,	-2,	FMT_DFLT,			"=",		// store numeric, multiple assignment?
 	0x16,	OP_TERM,	1,	MODE_BRACKETS | MODE_DSP_ARG | MODE_TRIM_ARG | MODE_TRIM_STR,	"FN",	// FN call
 	0x18,	OP_IFGOTO,	-1,	FMT_ARG,			"IF .. GOTO (arithmetic?)",
 	0x19,	OP_TERM,	0,	FMT_DFLT,			"END",
